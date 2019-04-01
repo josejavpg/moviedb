@@ -18,6 +18,7 @@
 		315F359E2251850F00B9B7F2 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F359D2251850F00B9B7F2 /* FetchData.swift */; };
 		315F35A02252558F00B9B7F2 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F359F2252558F00B9B7F2 /* MovieTableViewCell.swift */; };
 		315F35A22252B3DF00B9B7F2 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F35A12252B3DF00B9B7F2 /* MovieDetailViewController.swift */; };
+		315F35A42252C40000B9B7F2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F35A32252C40000B9B7F2 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		315F359D2251850F00B9B7F2 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		315F359F2252558F00B9B7F2 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		315F35A12252B3DF00B9B7F2 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		315F35A32252C40000B9B7F2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		77D774397355EF47D4068232 /* Pods-moviedb-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moviedb-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moviedb-test/Pods-moviedb-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 			children = (
 				315F359922516DB200B9B7F2 /* Constant.swift */,
 				315F359D2251850F00B9B7F2 /* FetchData.swift */,
+				315F35A32252C40000B9B7F2 /* NetworkManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				315F3584225070D800B9B7F2 /* AppDelegate.swift in Sources */,
 				315F35A02252558F00B9B7F2 /* MovieTableViewCell.swift in Sources */,
 				315F359E2251850F00B9B7F2 /* FetchData.swift in Sources */,
+				315F35A42252C40000B9B7F2 /* NetworkManager.swift in Sources */,
 				315F35A22252B3DF00B9B7F2 /* MovieDetailViewController.swift in Sources */,
 				315F359A22516DB200B9B7F2 /* Constant.swift in Sources */,
 				315F359C22517B5600B9B7F2 /* Model.swift in Sources */,
