@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieTableViewCell: UITableViewCell {
 	@IBOutlet weak var movieTitle: UILabel!
-	@IBOutlet weak var tagline: UILabel!
 	@IBOutlet weak var voteAvarage: UILabel!
+	@IBOutlet weak var poster: UIImageView!
 	
     override func awakeFromNib() {
         super.awakeFromNib()

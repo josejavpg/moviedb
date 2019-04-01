@@ -13,9 +13,9 @@ import AlamofireObjectMapper
 import RealmSwift
 
 class FetchData {
-	static func get <T: Object> (type: T.Type,success:@escaping () -> Void, fail:@escaping (_ error:NSError)->Void)->Void where T:Mappable, T:Meta { // path: String, 
+	static func get <T: Object> (type: T.Type, path: String, success:@escaping () -> Void, fail:@escaping (_ error:NSError)->Void)->Void where T:Mappable, T:Meta {
 	
-		Alamofire.request(type.url(), method: .get).responseObject { (response: DataResponse<MovieResponse>) in
+		Alamofire.request(type.url(path: path), method: .get).responseObject { (response: DataResponse<MovieResponse>) in
 	
 			switch response.result {
 			case .success:

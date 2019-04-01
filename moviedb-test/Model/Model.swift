@@ -11,7 +11,7 @@ import RealmSwift
 import ObjectMapper
 
 protocol Meta {
-	func url() -> String
+	static func url(path: String) -> String
 }
 
 class MovieResponse: Mappable {
@@ -84,7 +84,7 @@ class Movie: Object, Mappable, Meta {
 	}
 	
 	//Impl. of Meta protocol
-	func url() -> String {
+	static func url(path: String = "") -> String {
 		return "\(Constant.API_URL)/movie\(path)?api_key=\(Constant.API_KEY)"
 	}
 }
@@ -121,9 +121,9 @@ class Popular: Movie {
 //	}
 	
 	//Impl. of Meta protocol
-	override func url(path: String = "") -> String {
-		return "\(Constant.API_URL)/movie/popular?api_key=\(Constant.API_KEY)"
-	}
+//	override static func url() -> String {
+//		return "\(Constant.API_URL)/movie/popular?api_key=\(Constant.API_KEY)"
+//	}
 }
 
 class Upcomming: Movie {
@@ -183,9 +183,9 @@ class Upcomming: Movie {
 //	}
 	
 	//Impl. of Meta protocol
-	override func url(path: String = "") -> String {
-		return "\(Constant.API_URL)/movie/upcomming?api_key=\(Constant.API_KEY)"
-	}
+//	func url() -> String {
+//		return "\(Constant.API_URL)/movie/upcomming?api_key=\(Constant.API_KEY)"
+//	}
 }
 class TopRated: Movie {
 //	@objc dynamic var id = 0
@@ -244,7 +244,7 @@ class TopRated: Movie {
 //	}
 	
 	//Impl. of Meta protocol
-	override func url(path: String = "") -> String {
-		return "\(Constant.API_URL)/movie/top_rated?api_key=\(Constant.API_KEY)"
-	}
+//	 func url() -> String {
+//		return "\(Constant.API_URL)/movie/top_rated?api_key=\(Constant.API_KEY)"
+//	}
 }

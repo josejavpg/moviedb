@@ -20,20 +20,19 @@ class MovieListViewController: UIViewController {
 	@IBOutlet weak var tableView: UITableView!
 	
 	let realm = try! Realm()
-	var popularMovies		: Results<Popular>?//[Movie]()
-	var upcomingMovies 		: Results<Upcomming>?//[Movie]()
-	var topRatedMovies 		: Results<TopRated>?//[Movie]()
+	var popularMovies		: Results<Movie>?//Poppular
+	var upcomingMovies 		: Results<Movie>?//Upcomming
+	var topRatedMovies 		: Results<Movie>?//TopRated
 	var moviesDataSource 	: Results<Movie>?
 	var categoryPath = "/popular"
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.popularMovies		=	self.realm.objects(Popular.self)
-		self.upcomingMovies		=	self.realm.objects(Upcomming.self)
-		self.topRatedMovies		=	self.realm.objects(TopRated.self)
+		self.popularMovies		=	self.realm.objects(Movie.self)
+		self.upcomingMovies		=	self.realm.objects(Movie.self)
+		self.topRatedMovies		=	self.realm.objects(Movie.self)
 		self.moviesDataSource	=	self.realm.objects(Movie.self)
-		print("\(Realm.Configuration.defaultConfiguration.fileURL)")
 		getMovies()
 		// Do any additional setup after loading the view.
 	}
@@ -42,35 +41,37 @@ class MovieListViewController: UIViewController {
 	//MARK:- Functions
 
 	@IBAction func categorySelected(_ sender: Any) {
-		
+		try? realm.write {
+			realm.deleteAll()
+		}
 		switch category.selectedSegmentIndex {
 		case 1:
-			//moviesDataSource = upcomingMovies
+			moviesDataSource = upcomingMovies
 			categoryPath = "/upcoming"
 		case 2:
-			//moviesDataSource = topRatedMovies
+			moviesDataSource = topRatedMovies
 			categoryPath = "/top_rated"
 		default:
-			//moviesDataSource = popularMovies
+			moviesDataSource = popularMovies
 			categoryPath = "/popular"
 		}
 		getMovies()
 	}
 	
 	func getMovies() {
-		FetchData.get(type: Movie.self, success: { //path: self.categoryPath, 
+		FetchData.get(type: Movie.self, path: self.categoryPath, success: {
 			print("OK")
 			
 			switch self.category.selectedSegmentIndex {
 			case 1:
 				//moviesDataSource = upcomingMovies
-				self.upcomingMovies = self.realm.objects(Upcomming.self)
+				self.upcomingMovies = self.realm.objects(Movie.self)
 			case 2:
 				//moviesDataSource = topRatedMovies
-				self.topRatedMovies = self.realm.objects(TopRated.self)
+				self.topRatedMovies = self.realm.objects(Movie.self)
 			default:
 				//moviesDataSource = popularMovies
-				self.popularMovies = self.realm.objects(Popular.self)
+				self.popularMovies = self.realm.objects(Movie.self)
 			}
 			self.tableView.reloadData()
 		}) { (error) in
@@ -85,10 +86,14 @@ class MovieListViewController: UIViewController {
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource{
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		
-		guard let numberOfRow = moviesDataSource?.count else {
-			return 0
+		switch self.category.selectedSegmentIndex {
+		case 1:
+			return upcomingMovies?.count ?? 0
+		case 2:
+			return topRatedMovies?.count ?? 0
+		default:
+			return popularMovies?.count ?? 0
 		}
-		return numberOfRow
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,27 +101,39 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource{
 		guard let cell = tableView.dequeueReusableCell(withIdentifier:  "MovieTableViewCell") as! MovieTableViewCell? else{
 			return UITableViewCell()
 		}
-		var movie: Movie? //moviesDataSource?[indexPath.row]
-		switch self.category.selectedSegmentIndex {
-		case 1:
-			//moviesDataSource = upcomingMovies
-			self.upcomingMovies = self.realm.objects(Upcomming.self)
-			movie = upcomingMovies?[indexPath.row]
-		case 2:
-			//moviesDataSource = topRatedMovies
-			self.topRatedMovies = self.realm.objects(TopRated.self)
-			movie = topRatedMovies?[indexPath.row]
-		default:
-			//moviesDataSource = popularMovies
-			self.popularMovies = self.realm.objects(Popular.self)
-			movie = popularMovies?[indexPath.row]
+		guard let movie = moviesDataSource?[indexPath.row] else{
+			return UITableViewCell()
 		}
-		cell.movieTitle.text = movie?.title
-		cell.tagline.text = movie?.tagline
-		cell.tagline.text = "\(String(describing: movie?.vote_average))"
+		
+		cell.movieTitle.text = movie.title
+		cell.voteAvarage.text = "\(movie.vote_average)"
+		let resource = ImageResource(downloadURL: URL(string: "\(Constant.IMAGE_URL)/\(Constant.POSTER_SIZES["small"] ?? "original")\(movie.poster_path)")!, cacheKey: "\(Constant.IMAGE_URL)\(movie.poster_path)")
+		cell.poster.kf.indicatorType = .activity
+		cell.poster.kf.setImage(with: resource)
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 180.0
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "showDetail" {
+			if let indexPath = self.tableView.indexPathForSelectedRow{
+				guard let movie = moviesDataSource?[indexPath.row] else{
+					return
+				}
+				guard let controller = segue.destination as? MovieDetailViewController else{
+					return
+				}
+				controller.movie = movie
+			}
+		}
+	}
 	
 }
 

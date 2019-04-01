@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in MovieListViewController.getMovies():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "popularMovies">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in static FetchData.get&lt;A&gt;(type:path:success:fail:):FetchData.swift">
       </ContextState>
       <ContextState
@@ -29,6 +37,14 @@
          <PersistentStrings>
             <PersistentString
                value = "&quot;\(Constant.API_URL)/movie\(path)?api_key=\(Constant.API_KEY)&quot;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static FetchData.get&lt;A&gt;(type:success:fail:):FetchData.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "type.init().url()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

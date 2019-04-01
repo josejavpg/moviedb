@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moviedb-test/Controller/ViewController.swift"
-            timestampString = "575836462.5664361"
+            timestampString = "575849034.617395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -22,90 +22,43 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moviedb-test/Controller/ViewController.swift"
-            timestampString = "575836462.566967"
+            timestampString = "575849034.61888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "categorySelected(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "moviedb_test.MovieListViewController.categorySelected(Any) -&gt; ()"
-                  moduleName = "moviedb-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josejavier/Dropbox/Learning/Swift/Prueba/Peiky/moviedb-test/moviedb-test/Controller/ViewController.swift"
-                  timestampString = "575836463.019506"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "101">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "moviedb_test.MovieListViewController.categorySelected(Any) -&gt; ()"
-                  moduleName = "moviedb-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josejavier/Dropbox/Learning/Swift/Prueba/Peiky/moviedb-test/moviedb-test/Controller/ViewController.swift"
-                  timestampString = "575836463.023401"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "287">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "moviedb_test.MovieListViewController.categorySelected(Any) -&gt; ()"
-                  moduleName = "moviedb-test"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/josejavier/Dropbox/Learning/Swift/Prueba/Peiky/moviedb-test/moviedb-test/Controller/ViewController.swift"
-                  timestampString = "575836463.02714"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "438">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moviedb-test/Util/FetchData.swift"
-            timestampString = "575836462.567351"
+            timestampString = "575849034.620437"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
             endingLineNumber = "18"
-            landmarkName = "get(type:success:fail:)"
+            landmarkName = "get(type:path:success:fail:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "static moviedb_test.FetchData.get&lt;A where A: RealmSwift.Object, A: ObjectMapper.Mappable, A: moviedb_test.Meta&gt;(type: A.Type, path: Swift.String, success: () -&gt; (), fail: (__C.NSError) -&gt; ()) -&gt; ()"
                   moduleName = "moviedb-test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/josejavier/Dropbox/Learning/Swift/Prueba/Peiky/moviedb-test/moviedb-test/Util/FetchData.swift"
-                  timestampString = "575836463.039098"
+                  timestampString = "575843525.452351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -113,14 +66,14 @@
                   offsetFromSymbolStart = "89">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Alamofire.DataResponse&lt;moviedb_test.MovieResponse&gt;) -&gt; () in static moviedb_test.FetchData.get&lt;A where A: RealmSwift.Object, A: ObjectMapper.Mappable, A: moviedb_test.Meta&gt;(type: A.Type, path: Swift.String, success: () -&gt; (), fail: (__C.NSError) -&gt; ()) -&gt; ()"
                   moduleName = "moviedb-test"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/josejavier/Dropbox/Learning/Swift/Prueba/Peiky/moviedb-test/moviedb-test/Util/FetchData.swift"
-                  timestampString = "575836463.042086"
+                  timestampString = "575843525.456133"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
@@ -137,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moviedb-test/Model/Model.swift"
-            timestampString = "575836462.5674289"
+            timestampString = "575849034.620688"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "88"
@@ -149,32 +102,127 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "moviedb-test/Util/FetchData.swift"
-            timestampString = "575836462.567493"
+            filePath = "moviedb-test/Controller/ViewController.swift"
+            timestampString = "575849034.620882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "get(type:success:fail:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in moviedb_test.MovieListViewController.getMovies() -&gt; ()"
+                  moduleName = "moviedb-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josejavier/Dropbox/Learning/Swift/Prueba/Peiky/moviedb-test/moviedb-test/Controller/ViewController.swift"
+                  timestampString = "575843707.7135381"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in moviedb_test.MovieListViewController.getMovies() -&gt; ()"
+                  moduleName = "moviedb-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josejavier/Dropbox/Learning/Swift/Prueba/Peiky/moviedb-test/moviedb-test/Controller/ViewController.swift"
+                  timestampString = "575843707.717243"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "391">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in moviedb_test.MovieListViewController.getMovies() -&gt; ()"
+                  moduleName = "moviedb-test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/josejavier/Dropbox/Learning/Swift/Prueba/Peiky/moviedb-test/moviedb-test/Controller/ViewController.swift"
+                  timestampString = "575843707.7206531"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "490">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviedb-test/Controller/ViewController.swift"
+            timestampString = "575849034.622332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviedb-test/Util/FetchData.swift"
+            timestampString = "575849034.623701"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "get(type:path:success:fail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "moviedb-test/Util/FetchData.swift"
+            timestampString = "575849034.6238379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "get(type:path:success:fail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "moviedb-test/Controller/ViewController.swift"
-            timestampString = "575836462.5675581"
+            timestampString = "575849034.623962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "getMovies()"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
